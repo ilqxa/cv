@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<style>
+    @page {
+        margin-top: 2cm;
+        margin-bottom: 2cm;
+    }
+    @media print {
+        .pagebreak {
+            page-break-before: always;
+        } /* page-break-after works, as well */
+    }
+    html, body, p{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    ul {
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    img {
+        padding-top: 10px;
+    }
+    #main_zone{
+        display: flex;
+    }
+    #blue_zone {
+        float: left;
+        width: 30%;
+        background-color: #003d74;
+        color: white;
+    }
+    #white_zone {
+        float: right;
+        width: 70%;
+        /* padding-right: 20px; */
+    }
+    .blue_title {
+        background-color: #002e58;
+        font-weight: bold;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+    }
+    .white_title {
+        color: #002E58;
+        font-weight: bold;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 2px solid #d5d6d6;
+        border-bottom: 2px solid #d5d6d6;
+        font-size: larger;
+    }
+    .blue_block {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        /* padding-bottom: 10px; */
+        line-height: 1.5;
+    }
+    .white_block {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 1.5;
+    }
+    .blue_point {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .white_point {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+    }
+    progress {
+        appearance: none;
+        width: 100%;
+        height: 10px;
+    }
+    progress::-webkit-progress-bar {
+        background-color: #002e58;
+    }
+    progress::-webkit-progress-value {
+        background-color: #FFFFFF;
+    }
+    .skill_title {
+        padding: 0px;
+        margin: 0px;
+    }
+    .skill_level {
+        margin-top: 5px;
+        text-align: right;
+    }
+    .skill_points {
+        list-style-type: circle;
+    }
+    .period {
+        float: left;
+        width: 20%;
+    }
+    .experience_title{
+        font-weight: bold;
+        font-size: large;
+    }
+    .contractor_name{
+        font-style: italic;
+    }
+    .description {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .experience_info {
+        float: right;
+        width: 80%;
+    }
+    #name {
+        font-weight: bold;
+        font-size: xx-large;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        line-height: 1;
+    }
+    #position {
+        font-size: large;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+</style>
+
+<html lang="ru">
+    <head>
+        <title>Илья Майстренко - Data Scientist</title>
+    </head>
+    <body>
+        <div id = main_zone>
+            <div id="blue_zone">
+                <div class="blue_block">
+                    <img src="624311639.jpeg" height="180">
+                    <p id="name">Илья<br>Майстренко</p>
+                    <p id="position">Data Scientist</p>
+                </div>
+                <p class="blue_title">Контакты</p>
+                <div class="blue_block">
+                    <p class="blue_point">Телефон<br>+7(920)116-56-59</p>
+                    <p class="blue_point">Электронная почта<br>ilia-may@ya.ru</p>
+                </div>
+                <p class="blue_title">Анализ данных</p>
+                <div class="blue_block">
+                    <div class="blue_point">
+                        <p class="skill_title">Джентельменский набор</p>
+                        <ul class="skill_points">
+                            <li>Pandas</li>
+                            <li>Numpy</li>
+                        </ul>
+                        <p class="skill_title">Мат оптимизация</p>
+                        <ul class="skill_points">
+                            <li>Sklearn</li>
+                            <li>XGBoost</li>
+                            <li>LightGBM</li>
+                            <li>GEKKO</li>
+                        </ul>
+                        <!-- <progress value="5" max="5"></progress> -->
+                        <!-- <p class="skill_level">Профессиональный</p> -->
+                    </div>
+                </div>
+                <p class="blue_title">Python разработка</p>
+                <div class="blue_block">
+                    <div class="blue_point">
+                        <p class="skill_title">Работа с API</p>
+                        <ul class="skill_points">
+                            <li>Requests</li>
+                            <li>Flask</li>
+                            <li>FastAPI</li>
+                        </ul>
+                        <p class="skill_title">Работа с базами</p>
+                        <ul class="skill_points">
+                            <li>sqlAlchemy</li>
+                        </ul>
+                        <p class="skill_title">Валидаторы</p>
+                        <ul class="skill_points">
+                            <li>Pydantic</li>
+                        </ul>
+                        <p class="skill_title">Асинхронность</p>
+                        <ul class="skill_points">
+                            <li>Async / Await</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pagebreak"></div>
+                <p class="blue_title">Визуализация</p>
+                <div class="blue_block">
+                    <div class="blue_point">
+                        <p class="skill_title">Дашборды</p>
+                        <ul class="skill_points">
+                            <li>MS Power BI</li>
+                            <li>Tableau</li>
+                            <li>Grafana</li>
+                        </ul>
+                        <p class="skill_title">Диаграммы</p>
+                        <ul class="skill_points">
+                            <li>Matplotlib</li>
+                            <li>Plotly</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="blue_title">Источники данных</p>
+                <div class="blue_block">
+                    <div class="blue_point">
+                        <p class="skill_title">SQL СУБД</p>
+                        <ul class="skill_points">
+                            <li>Postgre</li>
+                            <li>Oracle</li>
+                        </ul>
+                        <p class="skill_title">noSQL СУБД</p>
+                        <ul class="skill_points">
+                            <li>Redis</li>
+                            <li>MongoDB</li>
+                        </ul>
+                        <p class="skill_title">Big Data</p>
+                        <ul class="skill_points">
+                            <li>Spark</li>
+                            <li>Hive & Impala</li>
+                        </ul>
+                        <p class="skill_title">Стримы</p>
+                        <ul class="skill_points">
+                            <li>Kafka</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="blue_title">Workflow</p>
+                <div class="blue_block">
+                    <div class="blue_point">
+                        <p class="skill_title">Работа с проектом</p>
+                        <ul class="skill_points">
+                            <li>Jira</li>
+                            <li>Confluence</li>
+                        </ul>
+                        <p class="skill_title">Деплой приложения</p>
+                        <ul class="skill_points">
+                            <li>Vault & Consul</li>
+                            <li>Git</li>
+                            <li>Docker</li>
+                            <li>Kubernetes</li>
+                        </ul>
+                        <p class="skill_title">Жизненный цикл</p>
+                        <ul class="skill_points">
+                            <li>ML Flow</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="blue_title">Иностранные языки</p>
+                <div class="blue_block">
+                    <div class="blue_point">
+                        <p class="skill_title">Английский</p>
+                        <!-- <progress value="3" max="6"></progress> -->
+                        <!-- <p class="skill_level">B1 — Intermediate</p> -->
+                    </div>
+                </div>
+            </div>
+            <div id="white_zone">
+                <div class="white_block">
+                    <p>Специалист в автоматизации бизнес-процессов и работе с данными. Имею насыщенный 5-летний опыт и широкую экспертизу в подготовке аналитических инструментов для внутренних и внешних пользователей. Умею организовывать командное взаимодействие и выстраивать процесс разработки аналитических продуктов, налаживать работу с клиентами и подрядчиками, обеспечивать бесперебойный сервис.</p>
+                </div>
+                <p class="white_title">Опыт работы</p>
+                <div class="white_block">
+                    <div class="white_point">
+                        <p class="period">2021-11 -<br>2023-04</p>
+                        <div class="experience_info">
+                            <p class="experience_title">Data Scientist</p>
+                            <p class="contractor_name">Северсталь Диджитал, Москва</p>
+                            <p class="description">
+                                Исследование производственных процессов металургического предприятия, построение рекомендательных систем, основанных на оптимизационных математических моделях.<br>
+                                <ul>
+                                    <li>Провел EDA и подтвердил экономическую эффективность проекта, связанного с подбором легирующих элементов для стального проката. Разработал приложение, подбирающее <u>оптимальную схему плавки</u> металла на основании данных об актуальной потребности и допустимых технологиях производства. В основе проекта - целочисленная оптимизационная модель на базе GEKKO.</li>
+                                    <li>Разработал систему шинного калькулятора, позволяющую инженерам в едином окне контролировать парк покрышек карьерных самосвалов и <u>оценивать их оставшийся ресурс</u>. Готовое решение представляет из себя Power BI дашборд, опирающийся на набор витрин в PostgreSQL базе. Витрины регулярно обновляются из исходных данных с датчиков на самосвалах с расчетом необходимых метрик.</li>
+                                    <li>Работал над проектом по охлаждению горячей шихты, основная ценность которого - не допустить прожига ленты на выходе из линейного охладителя. На основании получаемых параметров с линейного охладителя реализовано <u>предсказание оптимальной скорости</u> движения охладительной ленты для достижения требуемой температуры на выходе. Результаты работы рекомендательной модели выведены в интерфейс оператора.</li>
+                                </ul>
+                                Применяемые технологии нацелены на работу с большими данными: Python, Docker, Kafka, Hadoop, Spark, Hive.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="white_point">
+                        <p class="period">2021-02 -<br>2021-10</p>
+                        <div class="experience_info">
+                            <p class="experience_title">Руководитель группы аналитики данных</p>
+                            <p class="contractor_name">Северсталь-ЦЕС, Ярославль</p>
+                            <p class="description">
+                                Построение процесса по разработке типовых аналитических инструментов, организация работы команды из 6 человек. Создал сервис BI-разработки, сформировав предложения для других компаний группы и внешнего рынка.<br>
+                                <ul>
+                                    <li>Типизировал процесс разработки дашбордов. Средний срок подготовки новых отчетов для пользователей снизился до 2.5 недель, параллельная разработка позволила выводить в релиз <u>8 новых отчетов каждый месяц</u>. Общее количество дашбордов на поддержке превысило 120 единиц.</li>
+                                    <li>Организовал процесс поддержки действующих решений, подготовив jira-pipline's для заказчиков, смежных команд и внутренних пользователей. Встроил в процесс разработки обязательное документирование в Confluence. Наладил <u>автоматический расчет KPI и SLA</u> по своей команде, подключившись к API инструментов Atlassian.</li>
+                                    <li>Первым в компании реализовал автоматизированный сбор статусов по разрабатываемым дашбордам с помощью Python-скрипта и API Power BI Report Server. Это позволило <u>реагировать на проблемы</u> с отчетами еще до того, как о них стало известно пользователям.</li>
+                                    <li>Совместно с командой корпоративного обучения создал авторский курс из 5 модулей по созданию отчетов Power BI для бизнес-пользователей. Курс вошел в <u>программу продвинутого обучения</u> "Цифровая сталь".</li>
+                                </ul>
+                                Стек технологий ориентирован на создание стабильных продуктов с последующей поддержкой: Power BI, Python, SAP BW, SAP HANA, Oracle, PostgreSQL.<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="white_point">
+                        <p class="period">2018-02 -<br>2021-01</p>
+                        <div class="experience_info">
+                            <p class="experience_title">Аналитик данных</p>
+                            <p class="contractor_name">Северсталь-ЦЕС, Ярославль</p>
+                            <p class="description">
+                                Разработка аналитических инструментов в целях повышения эффективности процессов Общего Центра Обслуживания. Проекты были направлены как на улучшение процессов по функциям (финансы, HR, закупки, реализация), так и на оценку и повышение производительности сотрудников.<br>
+                                <ul>
+                                    <li>Создал аналитический сервис для внешней системы подбора персонала. У провайдера данный функционал отсутствовал, хотя пользователи высказывали сильную потребность. Был разработан python-скрипт, выгружающий через API-интерфейс данные с внешнего сервиса и сохраняющий их во внутренние базы данных. Второй частью системы стал Power BI дашборд, в котором была реализована <u>визуализация и расчет необходимых метрик</u>. Рекрутеры и нанимающие руководители получили мощный инструмент контроля за процессом подбора.</li>
+                                    <li>Совместно с HR департаментом проводил исследования и эксперименты по оценке <u>уровня выгорания сотрудников</u>. Консолидация данных из разных систем позволила добиться уровня recall 0.81 в математической модели. Реализованный в последних версиях факторный анализ позволил HR BP более точно прорабатывать мероприятия по предотвращению увольнений.</li>
+                                    <li>Автоматизировал на 80% используемые в подразделениях excel-отчеты по KPI и SLA, предложил <u>использование BI-систем</u> в качестве удобной альтернативы и мощного средства автоматизации.</li>
+                                </ul>
+                                Технологический стек ориентирован на быстрое получение результата без привлечения дополнительных ресурсов ИТ-службы: MS Excel, Power BI, MS Access, SharePoint, VBA, SAP GUI.<br>
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p class="white_title">Образование</p>
+                <div class="white_block">
+                    <div class="white_point">
+                        <p class="period">2020-09 -<br>2025-06</p>
+                        <div class="experience_info">
+                            <p class="experience_title">Автоматизация управления в технических системах</p>
+                            <p class="contractor_name">Ярославский Государственный Технический Университет</p>
+                        </div>
+                    </div>
+                    <div class="white_point">
+                        <p class="period">2014-09 -<br>2017-06</p>
+                        <div class="experience_info">
+                            <p class="experience_title">Экономика и бухгалтерский учет</p>
+                            <p class="contractor_name">Ярославский филиал Московского Института Инженеров Транспорта</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="white_title">Сертификаты</p>
+                <div class="white_block">
+                    <div class="white_point">
+                        <p class="period">2019-05</p>
+                        <div class="experience_info">
+                            <p class="experience_title">Машинное обучение и анализ данных</p>
+                            <p class="contractor_name">Coursera, Яндекс & МФТИ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
